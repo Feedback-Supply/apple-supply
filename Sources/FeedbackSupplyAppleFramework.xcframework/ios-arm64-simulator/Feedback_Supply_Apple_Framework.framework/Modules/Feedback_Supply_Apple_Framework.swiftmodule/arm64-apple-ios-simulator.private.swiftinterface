@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios16.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Feedback_Supply_Apple_Framework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+@_exported import Feedback_Supply_Apple_Framework
+import Foundation
+import PencilKit
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SwiftUI.View {
+  public func feedbackView(token: Swift.String, taps: Swift.Int) -> some SwiftUI.View
+  
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public func addGestureRecognizer(taps: Swift.Int)
+}
+extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class FeedbackSupply : Foundation.ObservableObject {
+  public static var singleton: Feedback_Supply_Apple_Framework.FeedbackSupply
+  public var authKey: Swift.String
+  public var user: Swift.String
+  @Combine.Published @_projectedValueProperty($feedback) public var feedback: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $feedback: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct FeedbackView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s31Feedback_Supply_Apple_Framework0A4ViewV4bodyQrvp", 0) __
+}

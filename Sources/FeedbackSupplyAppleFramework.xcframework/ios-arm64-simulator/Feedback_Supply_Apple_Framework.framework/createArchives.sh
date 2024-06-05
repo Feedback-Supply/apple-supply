@@ -52,3 +52,7 @@ xcodebuild -create-xcframework \
 
 codesign --timestamp -s <identity> xcframeworks/FeedbackSupplyAppleFramework.xcframework
 
+rm -r ../../feedback-supply-apple-package/FeedbackSupplyApplePackage/Sources/FeedbackSupplyAppleFramework.xcframework
+
+cp -R xcframeworks/FeedbackSupplyAppleFramework.xcframework ../../feedback-supply-apple-package/FeedbackSupplyApplePackage/Sources
+

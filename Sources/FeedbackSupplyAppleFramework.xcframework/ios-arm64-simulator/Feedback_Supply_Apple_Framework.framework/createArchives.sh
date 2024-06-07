@@ -19,7 +19,7 @@ xcodebuild archive \
   SKIP_INSTALL=NO \
   OTHER_SWIFT_FLAGS=-no-verify-emitted-module-interface
 
-#-configuration Release \
+
 # iOS simulator
 TARGET=iOS_Simulator
 xcodebuild archive \
@@ -32,13 +32,13 @@ xcodebuild archive \
   SKIP_INSTALL=NO \
   OTHER_SWIFT_FLAGS=-no-verify-emitted-module-interface
 
-# macOS devices
+#macOS devices
 # TARGET=macOS
 # xcodebuild archive \
-#   -project "Feedback Supply Apple Framework.xcodeproj" \
+#  -project "Feedback Supply Apple Framework.xcodeproj" \
 #   -scheme "Feedback Supply Apple Framework" \
 #   -destination "generic/platform=macOS" \
-#   -archivePath "archives/FeedbackSupplyAppleFramework-macOS" \
+#  -archivePath "archives/FeedbackSupplyAppleFramework-macOS" \
 #   BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
 #   SKIP_INSTALL=NO \
 #   OTHER_SWIFT_FLAGS=-no-verify-emitted-module-interface
@@ -48,9 +48,11 @@ xcodebuild -create-xcframework \
     -archive archives/FeedbackSupplyAppleFramework-iOS_Simulator.xcarchive -framework Feedback_Supply_Apple_Framework.framework \
     -output xcframeworks/FeedbackSupplyAppleFramework.xcframework
     
+    #-archive archives/FeedbackSupplyAppleFramework-iOS.xcarchive -framework Feedback_Supply_Apple_Framework.framework \
+    #-archive archives/FeedbackSupplyAppleFramework-iOS_Simulator.xcarchive -framework Feedback_Supply_Apple_Framework.framework \
     # -archive archives/FeedbackSupplyAppleFramework-macOS.xcarchive -framework Feedback_Supply_Apple_Framework.framework \
 
-codesign --timestamp -s <identity> xcframeworks/FeedbackSupplyAppleFramework.xcframework
+#codesign --timestamp -s <identity> xcframeworks/FeedbackSupplyAppleFramework.xcframework
 
 rm -r ../../feedback-supply-apple-package/FeedbackSupplyApplePackage/Sources/FeedbackSupplyAppleFramework.xcframework
 

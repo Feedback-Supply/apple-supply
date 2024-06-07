@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
 import CoreVideo
+import DeveloperToolsSupport
 @_exported import Feedback_Supply_Apple_Framework
 import Foundation
 import PencilKit
@@ -224,14 +225,13 @@ public enum Family : Swift.String {
     get
   }
 }
-
 public struct Mapper {
   public static func model(from identifier: Feedback_Supply_Apple_Framework.Identifier) -> Feedback_Supply_Apple_Framework.Model
   public static func family(from identifier: Feedback_Supply_Apple_Framework.Identifier) -> Feedback_Supply_Apple_Framework.Family
   public static func screenSize(from model: Feedback_Supply_Apple_Framework.Model) -> Feedback_Supply_Apple_Framework.ScreenSize
 }
 extension SwiftUI.View {
-  public func feedbackView(token: Swift.String, taps: Swift.Int) throws -> some SwiftUI.View
+  public func feedbackView(token: Swift.String, taps: Swift.Int, user: Swift.String = "", setUserProgrammaticallyOnly: Swift.Bool = false) -> some SwiftUI.View
   
 }
 extension UIKit.UIApplication {
@@ -245,6 +245,9 @@ extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
   public static var singleton: Feedback_Supply_Apple_Framework.FeedbackSupply
   public var authKey: Swift.String
   public var user: Swift.String
+  public var setUserProgrammatically: Swift.Bool
+  public var annotations: [Feedback_Supply_Apple_Framework.Annotation]
+  public func addAnnotation(_ annotation: Feedback_Supply_Apple_Framework.Annotation)
   public var reachabilityTest: Swift.Bool {
     get
     set
@@ -485,6 +488,10 @@ public enum ScreenSize : Swift.String {
 extension Feedback_Supply_Apple_Framework.ScreenSize : Swift.Comparable {
   public static func < (lhs: Feedback_Supply_Apple_Framework.ScreenSize, rhs: Feedback_Supply_Apple_Framework.ScreenSize) -> Swift.Bool
   public static func == (lhs: Feedback_Supply_Apple_Framework.ScreenSize, rhs: Feedback_Supply_Apple_Framework.ScreenSize) -> Swift.Bool
+}
+public struct Annotation : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_Concurrency.MainActor(unsafe) public struct FeedbackView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Feedback_Supply_Apple_Framework
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Feedback_Supply_Apple_Framework
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
 import CoreVideo
@@ -246,8 +246,8 @@ extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
   public var authKey: Swift.String
   public var user: Swift.String
   public var setUserProgrammatically: Swift.Bool
-  public var annotations: [Feedback_Supply_Apple_Framework.Annotation]
-  public func addAnnotation(_ annotation: Feedback_Supply_Apple_Framework.Annotation)
+  public var currentActiveImage: Swift.Int?
+  public func currentActiveImageFromId(_ id: Foundation.UUID)
   public var reachabilityTest: Swift.Bool {
     get
     set
@@ -490,6 +490,10 @@ extension Feedback_Supply_Apple_Framework.ScreenSize : Swift.Comparable {
   public static func == (lhs: Feedback_Supply_Apple_Framework.ScreenSize, rhs: Feedback_Supply_Apple_Framework.ScreenSize) -> Swift.Bool
 }
 public struct Annotation : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CapturedContent : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

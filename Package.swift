@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "FeedbackSupply",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v17)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -15,8 +15,7 @@ let package = Package(
             targets: ["FeedbackSupplyApplePackageWrapperTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/marmelroy/Zip.git", from: "2.1.2"),
-        .package(url: "https://github.com/awslabs/aws-sdk-swift.git", from: "0.42.0")
+        .package(url: "https://github.com/marmelroy/Zip.git", from: "2.1.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -25,7 +24,6 @@ let package = Package(
             name: "FeedbackSupplyApplePackageWrapperTarget",
             dependencies: [
                 .target(name: "FeedbackSupplyAppleFrameworkBinaryTarget"),
-                .product(name: "AWSS3", package: "aws-sdk-swift"),
                 .product(name: "Zip", package: "zip")
             ],
             path: "./Sources/FeedbackSupplyApplePackageWrapperTarget"

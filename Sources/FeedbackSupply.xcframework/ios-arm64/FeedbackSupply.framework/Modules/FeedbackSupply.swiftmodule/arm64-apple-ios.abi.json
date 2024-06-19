@@ -25038,161 +25038,168 @@
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1173,
+      "offset": 1124,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1168,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1884,
+      "offset": 1879,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1954,
+      "offset": 1943,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1999,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 2593,
+      "offset": 2638,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 2599,
+      "offset": 2644,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 2688,
+      "offset": 2733,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 2694,
+      "offset": 2739,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2895,
+      "offset": 2940,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2900,
+      "offset": 2945,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 3140,
+      "offset": 3185,
       "length": 4,
       "value": "0.21"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 3771,
+      "offset": 3816,
       "length": 35,
       "value": "\"You do not have any feedback left\""
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3941,
+      "offset": 3986,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3946,
+      "offset": 3991,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4119,
+      "offset": 4164,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 4206,
+      "offset": 4251,
       "length": 11,
       "value": "\"Your name\""
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4370,
+      "offset": 4415,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 4495,
+      "offset": 4540,
       "length": 74,
       "value": "\"The name you enter here will be sent along with the feedback you provide\""
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4960,
+      "offset": 5005,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5007,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 5044,
+      "offset": 5060,
       "length": 17,
       "value": "\"Feedback Supply\""
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 5449,
+      "offset": 5465,
       "length": 7,
       "value": "\"Close\""
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5641,
+      "offset": 5657,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/philip\/Local Documents\/feedback-supply-apple-framework\/Feedback Supply Apple Framework\/Feedback Supply Apple Framework\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 5749,
+      "offset": 5765,
       "length": 10,
       "value": "\"Settings\""
     },

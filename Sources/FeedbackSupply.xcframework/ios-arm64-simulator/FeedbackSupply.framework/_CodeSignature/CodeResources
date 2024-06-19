@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/FeedbackSupply.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		eNxbzifi7aXdzkWpWr3eKA33dX4=
+		6m/J32VDcUxDpWjunHqO5jfn5w0=
 		</data>
 		<key>Modules/FeedbackSupply.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/FeedbackSupply.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xe/GaD/78tjz7UvqgN8DEWki9Bo=
+		aWvN2kRR2A2aDO/3ZGD+kaCcda4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,7 +80,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6w/PNpYoXlADL9ETfrYVKtsKfa5JZJkcsgF+yldD+Ho=
+			MPFJkAewRKmXYihnLlCFlQSJKCe4plOc8Uupu4OddpA=
 			</data>
 		</dict>
 		<key>Modules/FeedbackSupply.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -108,7 +108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jbOm7EBriw9/OKe22WH6miI7JQ8MwhA8s4jdEaJNdUQ=
+			bfGyTPCjpaok7QCTPHs3V2Nh+EuQ2QEaYC9on1JR0Ig=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

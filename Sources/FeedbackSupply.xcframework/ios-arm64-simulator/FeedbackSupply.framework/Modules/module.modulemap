@@ -1,0 +1,4 @@
+framework module FeedbackSupply {
+  header "FeedbackSupply-Swift.h"
+  requires objc
+}

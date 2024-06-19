@@ -1,0 +1,690 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FeedbackSupply
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import CoreVideo
+import DeveloperToolsSupport
+import Foundation
+import PencilKit
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class Device {
+  final public let identifier: FeedbackSupply.Identifier
+  public var family: FeedbackSupply.Family {
+    get
+  }
+  public var model: FeedbackSupply.Model {
+    get
+  }
+  public var screenSize: FeedbackSupply.ScreenSize {
+    get
+  }
+  public init(identifier: FeedbackSupply.Identifier? = nil)
+  @objc deinit
+}
+extension FeedbackSupply.Device {
+  public var isPod: Swift.Bool {
+    get
+  }
+  public var isPhone: Swift.Bool {
+    get
+  }
+  public var isPad: Swift.Bool {
+    get
+  }
+  public var isSimulator: Swift.Bool {
+    get
+  }
+  public var isRetina: Swift.Bool {
+    get
+  }
+  public var actualModel: FeedbackSupply.Model {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var osName: Swift.String {
+    get
+  }
+  public var osVersion: Swift.String? {
+    get
+  }
+}
+extension FeedbackSupply.Device : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum DeviiceType : Swift.String {
+  case unknown
+  case iPodTouch1
+  case iPodTouch2
+  case iPodTouch3
+  case iPodTouch4
+  case iPodTouch5
+  case iPodTouch6
+  case iPodTouch7
+  case iPhone4
+  case iPhone4s
+  case iPhone5
+  case iPhone5c
+  case iPhone5s
+  case iPhone6
+  case iPhone6Plus
+  case iPhone6s
+  case iPhone6sPlus
+  case iPhoneSE
+  case iPhone7
+  case iPhone7Plus
+  case iPhone8
+  case iPhone8Plus
+  case iPhoneX
+  case iPhoneXs
+  case iPhoneXsMax
+  case iPhoneXr
+  case iPhone11
+  case iPhone11Pro
+  case iPhone11ProMax
+  case iPhoneSE2
+  case iPhone12Mini
+  case iPhone12
+  case iPhone12Pro
+  case iPhone12ProMax
+  case iPhone13Mini
+  case iPhone13
+  case iPhone13Pro
+  case iPhone13ProMax
+  case iPhoneSE3
+  case iPhone14
+  case iPhone14Plus
+  case iPhone14Pro
+  case iPhone14ProMax
+  case iPhone15
+  case iPhone15Plus
+  case iPhone15Pro
+  case iPhone15ProMax
+  case iPad2
+  case iPad3
+  case iPad4
+  case iPadAir
+  case iPadAir2
+  case iPadAir3
+  case iPadAir4
+  case iPadAir5
+  case iPad5
+  case iPad6
+  case iPad7
+  case iPad8
+  case iPad9
+  case iPad10
+  case iPadMini
+  case iPadMini2
+  case iPadMini3
+  case iPadMini4
+  case iPadMini5
+  case iPadMini6
+  case iPadPro
+  case iPadPro2
+  case iPadPro3
+  case iPadPro4
+  case iPadPro5
+  case iPadPro6
+  case simulator
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DeviiceSize : Swift.String {
+  case screenUnknown
+  case screen3Dot5Inches
+  case screen4Inches
+  case screen4Dot7Inches
+  case screen5Dot4Inches
+  case screen5Dot5Inches
+  case screen5Dot8Inches
+  case screen6Dot1Inches
+  case screen6Dot5Inches
+  case screen6Dot7Inches
+  case screen7Dot9Inches
+  case screen8Dot3Inches
+  case screen9Dot7Inches
+  case screen10Dot2Inches
+  case screen10Dot5Inches
+  case screen10Dot9Inches
+  case screen11Inches
+  case screen12Dot9Inches
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DeviiceConnectivity : Swift.String {
+  case unknown
+  case wiFi
+  case wiFi3G
+  case wiFi4G
+  case wiFi5G
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(*, deprecated, message: "Use Device class instead.")
+public struct Deviice {
+  public var identifier: Swift.String {
+    get
+  }
+  public var type: FeedbackSupply.DeviiceType {
+    get
+  }
+  public var model: Swift.String {
+    get
+  }
+  public var size: FeedbackSupply.DeviiceSize {
+    get
+  }
+  public var connectivity: FeedbackSupply.DeviiceConnectivity {
+    get
+  }
+  public var completeName: Swift.String {
+    get
+  }
+  public var year: Swift.Int {
+    get
+  }
+  public static var current: FeedbackSupply.Deviice {
+    get
+  }
+}
+extension FeedbackSupply.Deviice : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum Family : Swift.String {
+  case iPodTouch
+  case iPhone
+  case iPad
+  case simulator
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Mapper {
+  public static func model(from identifier: FeedbackSupply.Identifier) -> FeedbackSupply.Model
+  public static func family(from identifier: FeedbackSupply.Identifier) -> FeedbackSupply.Family
+  public static func screenSize(from model: FeedbackSupply.Model) -> FeedbackSupply.ScreenSize
+}
+extension SwiftUI.View {
+  public func feedbackView(token: Swift.String, taps: Swift.Int, user: Swift.String = "", setUserProgrammaticallyOnly: Swift.Bool = false) -> some SwiftUI.View
+  
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public func addGestureRecognizer(taps: Swift.Int)
+}
+extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class FeedbackSupplyService : Foundation.ObservableObject {
+  public static var singleton: FeedbackSupply.FeedbackSupplyService
+  public var authKey: Swift.String
+  public var user: Swift.String
+  public var setUserProgrammatically: Swift.Bool
+  public var currentActiveImage: Swift.Int?
+  public func currentActiveImageFromId(_ id: Foundation.UUID)
+  public var reachabilityTest: Swift.Bool {
+    get
+    set
+  }
+  @Combine.Published @_projectedValueProperty($feedback) public var feedback: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $feedback: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (FeedbackSupply.Reachability) -> ()
+  public typealias NetworkUnreachable = (FeedbackSupply.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: FeedbackSupply.Reachability.NetworkStatus, b: FeedbackSupply.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: FeedbackSupply.Reachability.Connection
+    public static func == (a: FeedbackSupply.Reachability.Connection, b: FeedbackSupply.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: FeedbackSupply.Reachability.NetworkReachable?
+  public var whenUnreachable: FeedbackSupply.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: FeedbackSupply.Reachability.Connection {
+    get
+  }
+  public var connection: FeedbackSupply.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension FeedbackSupply.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public enum Connectivity : Swift.String {
+  case unknown
+  case wiFi
+  case cellular
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConnectivityDetails : Swift.String {
+  case unknown
+  case wiFi
+  case wiFi3G
+  case wiFi4G
+  case wiFi5G
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Model {
+  case unknown
+  case iPodTouch1
+  case iPodTouch2
+  case iPodTouch3
+  case iPodTouch4
+  case iPodTouch5
+  case iPodTouch6
+  case iPodTouch7
+  case iPhone2G
+  case iPhone3G
+  case iPhone3GS
+  case iPhone4
+  case iPhone4S
+  case iPhone5
+  case iPhone5C
+  case iPhone5S
+  case iPhone6
+  case iPhone6Plus
+  case iPhone6S
+  case iPhone6sPlus
+  case iPhoneSE
+  case iPhone7
+  case iPhone7Plus
+  case iPhone8
+  case iPhone8Plus
+  case iPhoneX
+  case iPhoneXS
+  case iPhoneXsMax
+  case iPhoneXr
+  case iPhone11
+  case iPhone11Pro
+  case iPhone11ProMax
+  case iPhoneSE2
+  case iPhone12Mini
+  case iPhone12
+  case iPhone12Pro
+  case iPhone12ProMax
+  case iPhone13Mini
+  case iPhone13
+  case iPhone13Pro
+  case iPhone13ProMax
+  case iPhoneSE3
+  case iPhone14
+  case iPhone14Plus
+  case iPhone14Pro
+  case iPhone14ProMax
+  case iPhone15
+  case iPhone15Plus
+  case iPhone15Pro
+  case iPhone15ProMax
+  case iPad2
+  case iPad3
+  case iPad4
+  case iPadAir
+  case iPadAir2
+  case iPadAir3
+  case iPadAir4
+  case iPadAir5
+  case iPad5
+  case iPad6
+  case iPad7
+  case iPad8
+  case iPad9
+  case iPad10
+  case iPadMini
+  case iPadMini2
+  case iPadMini3
+  case iPadMini4
+  case iPadMini5
+  case iPadMini6
+  case iPadPro
+  case iPadPro2
+  case iPadPro11Inch1
+  case iPadPro11Inch2
+  case iPadPro11Inch3
+  case iPadPro11Inch4
+  case iPadPro12Inch1
+  case iPadPro12Inch2
+  case iPadPro12Inch3
+  case iPadPro12Inch4
+  case iPadPro12Inch5
+  case iPadPro12Inch6
+  indirect case simulator(FeedbackSupply.Model)
+}
+extension FeedbackSupply.Model {
+  public var marketingName: Swift.String {
+    get
+  }
+}
+public enum ScreenSize : Swift.String {
+  case unknown
+  case screen3Dot5Inch
+  case screen4Inch
+  case screen4Dot7Inch
+  case screen5Dot4Inch
+  case screen5Dot5Inch
+  case screen5Dot8Inch
+  case screen6Dot1Inch
+  case screen6Dot5Inch
+  case screen6Dot7Inch
+  case screen7Dot9Inch
+  case screen8Dot3Inch
+  case screen9Dot7Inch
+  case screen10Dot2Inch
+  case screen10Dot5Inch
+  case screen10Dot9Inch
+  case screen11Inch
+  case screen12Dot9Inch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension FeedbackSupply.ScreenSize : Swift.Comparable {
+  public static func < (lhs: FeedbackSupply.ScreenSize, rhs: FeedbackSupply.ScreenSize) -> Swift.Bool
+  public static func == (lhs: FeedbackSupply.ScreenSize, rhs: FeedbackSupply.ScreenSize) -> Swift.Bool
+}
+public struct Annotation : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CapturedContent : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_Concurrency.MainActor(unsafe) public struct FeedbackView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14FeedbackSupply0A4ViewV4bodyQrvp", 0) __
+}
+public enum Identifier : Swift.String, Swift.CaseIterable {
+  case iPod1_1
+  case iPod2_1
+  case iPod3_1
+  case iPod4_1
+  case iPod5_1
+  case iPod7_1
+  case iPod9_1
+  case iPhone1_1
+  case iPhone1_2
+  case iPhone2_1
+  case iPhone3_1
+  case iPhone3_2
+  case iPhone3_3
+  case iPhone4_1
+  case iPhone5_1
+  case iPhone5_2
+  case iPhone5_3
+  case iPhone5_4
+  case iPhone6_1
+  case iPhone6_2
+  case iPhone7_1
+  case iPhone7_2
+  case iPhone8_1
+  case iPhone8_2
+  case iPhone8_4
+  case iPhone9_1
+  case iPhone9_2
+  case iPhone9_3
+  case iPhone9_4
+  case iPhone10_1
+  case iPhone10_2
+  case iPhone10_3
+  case iPhone10_4
+  case iPhone10_5
+  case iPhone10_6
+  case iPhone11_2
+  case iPhone11_4
+  case iPhone11_6
+  case iPhone11_8
+  case iPhone12_1
+  case iPhone12_3
+  case iPhone12_5
+  case iPhone12_8
+  case iPhone13_1
+  case iPhone13_2
+  case iPhone13_3
+  case iPhone13_4
+  case iPhone14_2
+  case iPhone14_3
+  case iPhone14_4
+  case iPhone14_5
+  case iPhone14_6
+  case iPhone14_7
+  case iPhone14_8
+  case iPhone15_2
+  case iPhone15_3
+  case iPhone15_4
+  case iPhone15_5
+  case iPhone16_1
+  case iPhone16_2
+  case iPad2_1
+  case iPad2_2
+  case iPad2_3
+  case iPad2_4
+  case iPad3_1
+  case iPad3_2
+  case iPad3_3
+  case iPad3_4
+  case iPad3_5
+  case iPad3_6
+  case iPad4_1
+  case iPad4_2
+  case iPad4_3
+  case iPad5_3
+  case iPad5_4
+  case iPad6_11
+  case iPad6_12
+  case iPad7_5
+  case iPad7_6
+  case iPad7_11
+  case iPad7_12
+  case iPad11_3
+  case iPad11_4
+  case iPad11_6
+  case iPad11_7
+  case iPad12_1
+  case iPad12_2
+  case iPad13_1
+  case iPad13_2
+  case iPad13_16
+  case iPad13_17
+  case iPad13_18
+  case iPad13_19
+  case iPad2_5
+  case iPad2_6
+  case iPad2_7
+  case iPad4_4
+  case iPad4_5
+  case iPad4_6
+  case iPad4_7
+  case iPad4_8
+  case iPad4_9
+  case iPad5_1
+  case iPad5_2
+  case iPad11_1
+  case iPad11_2
+  case iPad14_1
+  case iPad14_2
+  case iPad6_3
+  case iPad6_4
+  case iPad6_7
+  case iPad6_8
+  case iPad7_1
+  case iPad7_2
+  case iPad7_3
+  case iPad7_4
+  case iPad8_1
+  case iPad8_2
+  case iPad8_3
+  case iPad8_4
+  case iPad8_5
+  case iPad8_6
+  case iPad8_7
+  case iPad8_8
+  case iPad8_9
+  case iPad8_10
+  case iPad8_11
+  case iPad8_12
+  case iPad13_4
+  case iPad13_5
+  case iPad13_6
+  case iPad13_7
+  case iPad13_8
+  case iPad13_9
+  case iPad13_10
+  case iPad13_11
+  case iPad14_3
+  case iPad14_4
+  case iPad14_5
+  case iPad14_6
+  case i386
+  case x86_64
+  case arm64
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FeedbackSupply.Identifier]
+  public typealias RawValue = Swift.String
+  public static var allCases: [FeedbackSupply.Identifier] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Groups {
+}
+extension FeedbackSupply.DeviiceType : Swift.Equatable {}
+extension FeedbackSupply.DeviiceType : Swift.Hashable {}
+extension FeedbackSupply.DeviiceType : Swift.RawRepresentable {}
+extension FeedbackSupply.DeviiceSize : Swift.Equatable {}
+extension FeedbackSupply.DeviiceSize : Swift.Hashable {}
+extension FeedbackSupply.DeviiceSize : Swift.RawRepresentable {}
+extension FeedbackSupply.DeviiceConnectivity : Swift.Equatable {}
+extension FeedbackSupply.DeviiceConnectivity : Swift.Hashable {}
+extension FeedbackSupply.DeviiceConnectivity : Swift.RawRepresentable {}
+extension FeedbackSupply.Family : Swift.Equatable {}
+extension FeedbackSupply.Family : Swift.Hashable {}
+extension FeedbackSupply.Family : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension FeedbackSupply.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension FeedbackSupply.Reachability.NetworkStatus : Swift.Hashable {}
+extension FeedbackSupply.Reachability.Connection : Swift.Equatable {}
+extension FeedbackSupply.Reachability.Connection : Swift.Hashable {}
+extension FeedbackSupply.Connectivity : Swift.Equatable {}
+extension FeedbackSupply.Connectivity : Swift.Hashable {}
+extension FeedbackSupply.Connectivity : Swift.RawRepresentable {}
+extension FeedbackSupply.ConnectivityDetails : Swift.Equatable {}
+extension FeedbackSupply.ConnectivityDetails : Swift.Hashable {}
+extension FeedbackSupply.ConnectivityDetails : Swift.RawRepresentable {}
+extension FeedbackSupply.ScreenSize : Swift.Hashable {}
+extension FeedbackSupply.ScreenSize : Swift.RawRepresentable {}
+extension FeedbackSupply.Identifier : Swift.Equatable {}
+extension FeedbackSupply.Identifier : Swift.Hashable {}
+extension FeedbackSupply.Identifier : Swift.RawRepresentable {}
